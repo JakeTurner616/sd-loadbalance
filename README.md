@@ -1,6 +1,6 @@
 # sd-loadbalance nginx load balancing configuration
 
-This Nginx configuration is designed to load balance two applications running on `localhost:7860` and `localhost:7861`. The configuration uses the default round-robin load balancing method, where each server in the upstream group is used in a sequential manner. This assumes two automatic111 sd instances exist.
+This is a simple nginx configuration to load balance two applications running on `localhost:7860` and `localhost:7861`. The configuration uses the default round-robin load balancing method, where each server in the upstream group is used in a sequential manner. This config assumes two automatic111 sd instances exist.
 
 ## Configuration Details
 
@@ -17,16 +17,7 @@ The Nginx configuration file contains the following directives:
 
 Use within docker is quite simple. See the example dockerfile.
 
-For barmetal simply install nginx and paste the contents of the configuration - restart Nginx.
+For baremetal simply install nginx and paste the contents of the configuration - restart Nginx.
 
 After the configuration is applied, Nginx will load balance incoming requests between the two applications running on `localhost:7860` and `localhost:7861`.
 
-
-## Authors
-
-- John Smith (@johnsmith)
-- Jane Doe (@janedoe)
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
